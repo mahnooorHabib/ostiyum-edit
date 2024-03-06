@@ -1,0 +1,174 @@
+@import "config";
+
+section{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    form{
+        width: 45%;
+        min-height: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        input,select{
+            // margin: .2rem 0;
+            min-height: 2.8rem;
+            font-size: .9rem;
+        }
+        .big-inp,.short-inp-con{
+            padding: 0 .5rem;
+            min-width: 90%;
+            min-width: 15rem;
+        }
+        .big-inp,.short-inp-con,select,.short-inp{
+            margin: .2rem 0;
+        }
+        .short-inp-con{
+            padding: 0;
+            min-width: 92.3% !important;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            .short-inp{
+                width: 45%;
+                padding-left: .5rem;
+            }
+        }
+        h3{
+            margin: .4rem 0;
+            font-size: larger;
+        }
+        div{
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            // gap: .3rem;
+            width: 100%;
+            p{
+                display: flex;
+                align-items: center;
+                gap: .4rem;
+            }
+        }
+        select{
+            min-width: 94%;
+            flex-direction: row;
+            justify-content: left;
+        }
+        .payment-method{
+            .methods-con{
+                width: 80%;
+                .method{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: .3rem 0;
+                    border-radius: 6px;
+                    width: 70%;
+                    height: 5rem;
+                    background: $color-ultra-light-grey;
+                     
+                }
+                .selected{
+                    border: 1.3px solid $color-dark;
+                }
+            }
+        }
+        .submit-con{
+            width: 100%;
+            align-items: flex-start;
+            .submit-wrapper{
+                justify-content: left;
+                align-self: right;
+                input[type="submit"]{
+                    margin: 1rem 0;
+                    padding: 1rem;  
+                    height: 3.5rem;
+                    border: none !important;
+                    font-weight: 550;
+                    border-radius: 6px;
+                    background: $color-light-green;
+                    color: white;
+                    font-size: 1.09rem;
+                    &:hover{
+                        background: $color-dark-green;
+                    }
+                    &:focus{
+                        outline: 0.125em solid $color-dark-green;
+                        outline-offset: 0.25em;
+                    }
+                }
+            }
+        }
+        
+        }
+    .product-info{
+        background: whitesmoke;
+        width: 47%;
+        min-height: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+            .info-con,hr{
+                width: 90%;
+                margin: 1rem 0;
+                .info-each-product{
+                    display: flex;
+                    gap: 1rem;
+                    padding: 1rem 0;
+                    .info-img{
+                        img{
+                            width: 7rem;
+                            aspect-ratio: 1/1;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+                    .info-txt{
+                        
+                        h2{
+                            color: #2c2c2c;
+                        }
+                        p{
+                            margin: .4rem 0;
+                            color: #3b3b3b;
+                        }
+                    }
+                }
+            }
+            .total-price{
+                display: grid;
+                gap: .7rem;
+                width: 90%;
+                div{
+                    width: 90%;
+                    justify-content: space-between;
+                    display: flex;
+                }
+            }
+    }
+
+}
+
+@media (max-width:$breakpoint-midle-tablet) {
+    section{
+        flex-wrap: wrap-reverse;
+        justify-content: center !important;
+    }
+    .product-info{
+        width: 100% !important;
+        min-height: 15rem !important;
+        padding: 2rem 0;
+    }
+    form{
+        width: 90% !important;
+    }
+    .short-inp{
+        width: 45% !important;
+    }
+}

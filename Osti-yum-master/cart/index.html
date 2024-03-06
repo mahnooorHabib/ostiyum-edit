@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:image" content="https://osti-yum.netlify.app/src/assets/straberry-heats.jpeg">
+    <link rel="shortcut icon" href="src/assets/plate-love-food.png" type="image/x-icon">
+    <meta name="description" content="Explore our menu where each dish is a tale of flavor, a journey into gastronomic pleasure, Illuminating each dish with expertise. How do we craft such savory delights? Through meticulous selection">
+    <meta property="og:image" content="src/assets/straberry-heats.jpeg" />
+    <!-- makes it add to home screen (on mobiles) -->
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/cart.css">
+
+    <script defer src="../src/js/cart.js"></script>
+    <script defer src="../src/js/script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="../" class="nav-heading">
+            <h1>
+                Khoka khola
+            </h1>
+        </a>
+        
+        <div id="nav-link" class="nav-links ">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../catalog/">Catalog</a></li>
+                <li><a href="../About-us/">About us</a></li>
+                <li><a href="../Contact-us/">Contact us</a></li>
+            </ul>
+            
+        </div>
+        
+        <div class="cart">
+            <button>
+                <a href="" role="not_link" class="clr-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                    </svg>
+                </a>
+            </button>
+            <div class="nav-toggler">
+                <button id="open-nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.3rem" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+    </nav>
+
+    <section class="cart_sec">
+        <div class="empty-cart none" id="empty_cart_sec">
+
+        </div>
+
+        <div class="cart-header-con"  id="product-cart">
+            <div class="cart-header">
+                <div class="heading">
+                    <h1>Your cart</h1>
+
+                    <a href="../catalog/">Continue shopping</a>
+                </div>
+
+                <div class="cart-table-header">
+                    <div class="cart-table-column">
+                        <p>Product</p> 
+                    </div>
+
+                    <div class="cart-table-column">
+                        <p class="quantity-column">Quantity</p>
+                    </div>
+
+                    <div class="cart-table-column">
+                        <p>Price</p>
+                    </div>
+                </div>
+                <hr class="grey-line">
+            </div>
+            <div  class="products-con" id="products-con">
+
+            </div>               
+            <div class="cart-footer">
+                <hr class="grey-line">
+
+                <div class="cart-ftr-data">
+                    
+                    <div class="price">
+                        <p>Estimated total</p>
+                        <h4 id="total-price">$000</h4>
+                    </div>
+                    
+                    <div class="check-out-btn">
+                        <a href="../checkout/?src=cart" id="cart-checkout-btn">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ftr-container">
+            <div class="ftr-title"><h2 class="ftr-heading">Khoka khola</h2></div>
+            <div class="copyright">
+                <p>© <span id="year"></span> khokha khola, All rigths reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notify_con"></div>
+</body>
+</html>
